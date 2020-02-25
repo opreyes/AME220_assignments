@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body style='color:mistyRose;'>
+
+<h1 style='color:MediumSeaGreen;'>Assignment 5 Slideshow</h1>
+
+
+<script>
+function showImg( id ) {
+        // hide previously shown image
+        for ( i = 1; i < 4; i++) {
+            var obj = document.getElementById( "picture" + i );
+            if (obj != null)
+                obj.className = 'hide';
+        }
+        var obj = document.getElementById( "picture" + id );
+        if (obj != null)
+            obj.className = 'show';
+}
+</script>
+<style>
+  img {
+    height: 300px;
+    border: 5px solid MediumSeaGreen;
+  }
+    .show{display:block;}
+    .hide{display:none;}
+  input {
+    background-color: lightCoral;
+  }
+</style>
+
+<body>
+<img id="picture1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg"class="show">
+<input type="button" onclick ="showImg(1);" value= "1">
+
+<img id="picture2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg" class="hide">
+<input type="button" onclick ="showImg(2);" value= "2">
+
+<img id="picture3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg" class="hide">
+<input type="button" onclick ="showImg(3);" value= "3" style>
+
+</body>
+
+</html>
